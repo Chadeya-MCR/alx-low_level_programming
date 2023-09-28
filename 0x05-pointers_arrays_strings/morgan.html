@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        body{
+            box-sizing: border-box;
+            background-color: azure;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .main_content{
+            justify-content: center;
+            align-items: center;
+            margin:0;
+            padding:20px 250px;
+        }
+        form{
+            /* margin:0 auto; */
+            width:500px;
+            height:400px;
+        }
+        .select{
+            padding:5px;
+            width: 150px;
+        }
+        form .section_title{
+            font-family: Arial, Helvetica, sans-serif;
+            color:#ff7200;
+            font-size: 1.2rem;
+            text-transform: capitalize;
+        }
+        form .title{
+            color:#000;
+            text-transform: capitalize;
+            font-weight: 400;;
+        }
+        form .input{
+            border:none;
+            outline:none;
+            width:60%;
+            padding:5px;
+            margin-bottom:10px;
+            font-size: 1rem;
+        }
+        ::placeholder{
+            text-transform: capitalize;
+        }
+        form .submit{
+            border:none;
+            outline:none;
+            background-color: green;
+            padding:5px 15px;
+            color:white;
+            border-radius: 5px;
+            text-transform: capitalize;
+            font-weight: 500;
+        }
+        form option {
+            text-transform: capitalize;
+        }
+        .option_value{
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_content">
+        <fieldset>
+            <legend>Personal Info</legend>
+        <form action="#">
+            <label for="name" class="title">username</label><br>
+            <input type="text" name="uname" id="name" placeholder="enter your name" class="input" required><br>
+            <label for="psswd" class="title">password</label><br>
+            <input type="password" name="psswd"id="passwd" placeholder="enter your password" class="input" required><br>
+            <label for="languages" class="section_title">select your preferred programming language</label><br>
+            <select name="language" id="language" class="select">
+                <option value="javascript">Javascript</option>
+                <option value="python">Python</option>
+                <option value="C++">C++</option>
+                <option value="C">C</option>
+                <option value="React">React</option>
+                <option value="Php">Php</option>
+                <option value="SQL">SQL</option>
+                <option value="Java">Java</option>
+                <option value="Jquery">JQuery</option>
+                <option value="node.js">node.js</option>
+                <option value="Typescript">Typescript</option>
+            </select><br><br>
+            <label for="mode_of_study" class="title">mode of study</label><br>
+            <input list="mode_of_study">
+            <datalist id="mode_of_study" >
+                <option value="Weekend" >
+                <option value="Weekdays">
+                <option value="Virtual">
+                <option value="Full-time">
+                <option value="Part-time">
+            </datalist><br><br>
+            <input type="submit" value="submit" class="submit">
+        </form>
+        </fieldset>
+    </div>
+</body>
+</html>
