@@ -1,5 +1,9 @@
-school: main.c school.c
-    gcc main.c school.c -o school
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra
+SRC = main.c school.c
+
+school: $(SRC)
+    $(CC) $(CFLAGS) $(SRC) -o school
 
 all: school
 
