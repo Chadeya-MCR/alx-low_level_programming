@@ -1,11 +1,2 @@
-CC = gcc
-CFLAGS = -Wall -Werror -Wextra
-SRC = main.c school.c
-
-school: $(SRC)
-    $(CC) $(CFLAGS) $(SRC) -o school
-
-all: school
-
-.PHONY: all
-
+all: main.c holberton.c
+	gcc main.c holberton.c -o holberton
